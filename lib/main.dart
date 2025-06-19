@@ -8,75 +8,130 @@ void main() {
         title: Text('Workout tracker'),
         backgroundColor: Colors.blue[100],
       ),
-      body:Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
+      body:Column(
+        // mainAxisAlignment: MainAxisAlignment.center,
 
-            children: [
-              Text('text 1', style: TextStyle(
-              fontSize: 40,
-              color: Colors.blue[600],
-              fontWeight: FontWeight.bold,
-              shadows: [
-                Shadow(
-                    offset: Offset(2.0, 2.0),
-                    blurRadius: 30.0,
-                    color: Colors.purple
+          children:[
+            Container(
+              margin: EdgeInsets.all(10),
+
+              decoration: BoxDecoration(
+                color: Colors.black,
+                border: Border.all(
+                  color: Colors.blue,
+                  width: 5
                 )
-              ]
-            )
-          ),
-            Text('text 2', style: TextStyle(
-                fontSize: 50,
-                color: Colors.blue[600],
-                fontWeight: FontWeight.bold,
-                shadows: [
-                  Shadow(
-                      offset: Offset(2.0, 2.0),
-                      blurRadius: 30.0,
-                      color: Colors.purple
+              ),
+
+              child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+
+
+              children: [
+                Text('Name', style: TextStyle(
+                    fontSize: 25,
+                    color: Colors.blue[600],
+                    fontWeight: FontWeight.bold,
+                    shadows: [
+                      Shadow(
+                          offset: Offset(2.0, 2.0),
+                          blurRadius: 10.0,
+                          color: Colors.grey
+                      )
+                    ]
                   )
-                ]
-              )
+                ),
+                Text('Anthony', style: TextStyle(
+                    fontSize: 25,
+                    color: Colors.blue[600],
+                    fontWeight: FontWeight.bold,
+                    shadows: [
+                      Shadow(
+                          offset: Offset(2.0, 2.0),
+                          blurRadius: 10.0,
+                          color: Colors.grey
+                      )
+                    ]
+                 )
+                )
+              ],
             ),
-            Text('text 3', style: TextStyle(
-                fontSize: 60,
-                color: Colors.blue[600],
-                fontWeight: FontWeight.bold,
-                shadows: [
-                  Shadow(
-                      offset: Offset(2.0, 2.0),
-                      blurRadius: 30.0,
-                      color: Colors.purple
-                  )
-                ]
-              )
-            ),
-
-
-
-
-
-
-          // child: Text('My first flutter app', style: TextStyle(
-            //     fontSize: 40,
-            //     color: Colors.blue[600],
-            //     fontWeight: FontWeight.bold,
-            //     shadows: [
-            //       Shadow(
-            //           offset: Offset(2.0, 2.0),
-            //           blurRadius: 30.0,
-            //           color: Colors.purple
-            //       )
-            //     ]
-            // ),),
-
-        ],
-
-      )
-
     ),
+            Container(
+              margin: EdgeInsets.symmetric(horizontal: 30, vertical: 10),
+
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+
+
+                children: [
+                  Text('Age', style: TextStyle(
+                      fontSize: 25,
+                      color: Colors.blue[600],
+                      fontWeight: FontWeight.bold,
+                      shadows: [
+                        Shadow(
+                            offset: Offset(2.0, 2.0),
+                            blurRadius: 10.0,
+                            color: Colors.grey
+                        )
+                      ]
+                  )
+                  ),
+                  Text('21 years old', style: TextStyle(
+                      fontSize: 25,
+                      color: Colors.blue[600],
+                      fontWeight: FontWeight.bold,
+                      shadows: [
+                        Shadow(
+                            offset: Offset(2.0, 2.0),
+                            blurRadius: 10.0,
+                            color: Colors.grey
+                        )
+                      ]
+                  )
+                  )
+                ],
+              ),
+            ),
+            Container(
+              margin: EdgeInsets.fromLTRB(5, 4, 3, 2),
+
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+
+
+                children: [
+                  Text('Gender', style: TextStyle(
+                      fontSize: 25,
+                      color: Colors.blue[600],
+                      fontWeight: FontWeight.bold,
+                      shadows: [
+                        Shadow(
+                            offset: Offset(2.0, 2.0),
+                            blurRadius: 10.0,
+                            color: Colors.grey
+                        )
+                      ]
+                  )
+                  ),
+                  Text('Female', style: TextStyle(
+                      fontSize: 25,
+                      color: Colors.blue[600],
+                      fontWeight: FontWeight.bold,
+                      shadows: [
+                        Shadow(
+                            offset: Offset(2.0, 2.0),
+                            blurRadius: 10.0,
+                            color: Colors.grey
+                        )
+                      ]
+                  )
+                  )
+                ],
+              ),
+            ),
+  ])
   )));
 }
 
