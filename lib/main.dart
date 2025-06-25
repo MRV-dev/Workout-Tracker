@@ -12,75 +12,102 @@ class Userprofile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
+      resizeToAvoidBottomInset: true,
       appBar: AppBar(
-        backgroundColor: Colors.grey,
+        backgroundColor: Color(0xFF9AD2D6),
         title: Text('Info', style: TextStyle(
           fontWeight: FontWeight.bold,
 
         )),
         centerTitle: true,
       ),
-       body: SafeArea(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
+       body: Column(
             children: [
+              Container(
+                margin: EdgeInsets.fromLTRB(0, 30, 0, 0),
+                child: Column(
+                  children: [
+                    Text('User Profile', style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                  )),
 
-              Text('User Profile', style: TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-              )),
-              SizedBox(height: 10,),
-              Center(
-                child: Container(
-                    decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: Colors.grey,
-                    ),
-                    padding: EdgeInsets.all(10),
-                    child: Icon(Icons.person, size: 40,)
-                ),
+                  Column(
+                      children: [
+                        Center(
+                          child:
+                          Container(
+                              decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                                color: Colors.grey,
+                              ),
+                              padding: EdgeInsets.all(10),
+                              child: Icon(Icons.person, size: 35,)
+                          ),
+                        ),
+                      ]
+                  ),
+                ]),
               ),
-              Padding(
-                padding: EdgeInsets.all(10),
-                child: Container(
-                  margin: EdgeInsets.fromLTRB(0, 40, 100, 0),
-                 child: Column(
-                   children: [
-                     Padding(
-                       padding: EdgeInsets.only(right: 124),
-                       child: Text('Name', style: TextStyle(
-                         fontSize: 15,
-                         fontWeight: FontWeight.bold,
-                       )),
-                     ),
-                     Text('Ariel Anthony Maravilla', style: TextStyle(
-                       fontSize: 15,
-                       fontWeight: FontWeight.w300,
-                     )),
-                     SizedBox(height: 20,),
-                     Padding(
-                       padding: EdgeInsets.only(right: 124),
-                       child: Text('Email', style: TextStyle(
-                         fontSize: 15,
-                         fontWeight: FontWeight.bold,
-                       )),
-                     ),
-                     Padding(
-                       padding: EdgeInsets.only(left: 30),
-                        child: Text('Batstate-u@g.batstate-u.edu.ph', style: TextStyle(
-                           fontSize: 15,
-                           fontWeight: FontWeight.w300,
-                         ))
-                     )
 
-                   ],
-                 )
-                ),
-              )
+
+              Container(
+                width: double.infinity,
+                margin: EdgeInsets.fromLTRB(15, 40, 0, 0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text('Name', style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 15
+                      ),),
+                      Text('Ariel Anthony Maravilla'),
+
+                      SizedBox(height: 20,),
+                      Text('Email', style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 15
+                      ),),
+                      Text('Batstate-u@g.batstate-u.edu.ph'),
+
+                      SizedBox(height: 20,),
+                      Text('Company', style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 15
+                      ),),
+                      Text('Batangas State University TNEU Balayan'),
+
+                      SizedBox(height: 20,),
+                      Text('Contact Number', style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 15
+                      ),),
+                      Text('09123456789'),
+                    ],
+                  ),
+              ),
             ],
+       ),
+        bottomNavigationBar: Padding(
+          padding: const EdgeInsets.all(15.0),
+          child: ElevatedButton(
+            onPressed: () {
+              // Do something, like navigate to edit screen or open a form
+            },
+            style: ElevatedButton.styleFrom(
+              minimumSize: Size(double.infinity, 50), // Full width
+              backgroundColor: Color(0xFF08415C),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(12),
+              ),
+            ),
+            child: Text(
+              'Edit Profile',
+              style: TextStyle(fontSize: 18, color: Colors.white),
+            ),
           ),
+
         )
     );
 
