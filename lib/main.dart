@@ -1,138 +1,61 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(MaterialApp(
-    home: Scaffold(
-      backgroundColor: Colors.grey[100],
-      appBar: AppBar(
-        title: Text('Workout tracker'),
-        backgroundColor: Colors.blue[100],
-      ),
-      body:Column(
-        // mainAxisAlignment: MainAxisAlignment.center,
+class Homepage extends StatelessWidget {
+  const Homepage({super.key});
 
-          children:[
-            Container(
-              margin: EdgeInsets.all(10),
 
-              decoration: BoxDecoration(
-                color: Colors.black,
-                border: Border.all(
-                  color: Colors.blue,
-                  width: 5
-                )
-              ),
+  @override
+  Widget build(BuildContext context) {
+    final Purple = Color(0xFFCFBAE1);
+    final tiffanyblue = Color(0xFF9AD2D6);
+    final lightblue = Color(0xFF96C3CE);
 
+
+    return Scaffold(
+      backgroundColor: Color(0xFFF8F8FB),
+      body: SafeArea(
+        child: Column(
+          children: [
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
               child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-
-
-              children: [
-                Text('Name', style: TextStyle(
-                    fontSize: 25,
-                    color: Colors.blue[600],
-                    fontWeight: FontWeight.bold,
-                    shadows: [
-                      Shadow(
-                          offset: Offset(2.0, 2.0),
-                          blurRadius: 10.0,
-                          color: Colors.grey
+                children: [
+                  Column(
+                    children: [
+                      Text('Hi, Anthony', style: TextStyle(
+                        fontSize: 28,
+                        fontWeight: FontWeight.bold,
+                      )),
+                      SizedBox(height: 4),
+                      Padding(
+                        padding: EdgeInsets.only(right: 55),
+                        child: Text('Welcome!', style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold
+                        )),
                       )
-                    ]
+                    ],
                   )
+                ],
+              ),
+            ),
+
+            Padding(
+              padding: const EdgeInsetsGeometry.symmetric(horizontal: 10),
+              child: Container(
+                width: double.infinity,
+                decoration: BoxDecoration(
+                    gradient: LinearGradient(colors: [Purple, tiffanyblue,]),
+                    borderRadius: BorderRadius.circular(24)
                 ),
-                Text('Anthony', style: TextStyle(
-                    fontSize: 25,
-                    color: Colors.blue[600],
-                    fontWeight: FontWeight.bold,
-                    shadows: [
-                      Shadow(
-                          offset: Offset(2.0, 2.0),
-                          blurRadius: 10.0,
-                          color: Colors.grey
-                      )
-                    ]
-                 )
-                )
-              ],
-            ),
-    ),
-            Container(
-              margin: EdgeInsets.symmetric(horizontal: 30, vertical: 10),
-
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-
-
-                children: [
-                  Text('Age', style: TextStyle(
-                      fontSize: 25,
-                      color: Colors.blue[600],
-                      fontWeight: FontWeight.bold,
-                      shadows: [
-                        Shadow(
-                            offset: Offset(2.0, 2.0),
-                            blurRadius: 10.0,
-                            color: Colors.grey
-                        )
-                      ]
-                  )
-                  ),
-                  Text('21 years old', style: TextStyle(
-                      fontSize: 25,
-                      color: Colors.blue[600],
-                      fontWeight: FontWeight.bold,
-                      shadows: [
-                        Shadow(
-                            offset: Offset(2.0, 2.0),
-                            blurRadius: 10.0,
-                            color: Colors.grey
-                        )
-                      ]
-                  )
-                  )
-                ],
+                padding: EdgeInsets.all(24),
               ),
-            ),
-            Container(
-              margin: EdgeInsets.fromLTRB(5, 4, 3, 2),
-
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            )
 
 
-                children: [
-                  Text('Gender', style: TextStyle(
-                      fontSize: 25,
-                      color: Colors.blue[600],
-                      fontWeight: FontWeight.bold,
-                      shadows: [
-                        Shadow(
-                            offset: Offset(2.0, 2.0),
-                            blurRadius: 10.0,
-                            color: Colors.grey
-                        )
-                      ]
-                  )
-                  ),
-                  Text('Female', style: TextStyle(
-                      fontSize: 25,
-                      color: Colors.blue[600],
-                      fontWeight: FontWeight.bold,
-                      shadows: [
-                        Shadow(
-                            offset: Offset(2.0, 2.0),
-                            blurRadius: 10.0,
-                            color: Colors.grey
-                        )
-                      ]
-                  )
-                  )
-                ],
-              ),
-            ),
-  ])
-  )));
+          ],
+        ),
+      ),
+    );
+  }
 }
-
-
