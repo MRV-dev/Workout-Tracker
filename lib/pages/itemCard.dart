@@ -19,7 +19,12 @@ class ItemCard extends StatelessWidget {
               children: [
                 Column(
                   children: [
-                    Icon(Icons.ice_skating, size: 40,),
+                    Row(
+                      children: [
+                        Icon(Icons.fitness_center, size: 40,),
+                      ],
+                    ),
+
                   ],
                 ),
                 Column(
