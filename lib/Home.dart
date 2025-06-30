@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
 
-class Homepage extends StatelessWidget {
-  const Homepage({super.key});
+class Home extends StatelessWidget {
+  const Home({super.key});
 
 
   @override
   Widget build(BuildContext context) {
     final Purple = Color(0xFFCFBAE1);
     final tiffanyblue = Color(0xFF9AD2D6);
-    final lightblue = Color(0xFF96C3CE);
 
 
     return Scaffold(
