@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:new_app/pages/Workout.dart';
+import 'package:new_app/pages/itemCard.dart';
 
 class listItems extends StatefulWidget {
   const listItems({super.key});
@@ -12,8 +13,7 @@ class _listItemsState extends State<listItems> {
 
   List<Workout> workout = [
     Workout(name: 'Pushups', description: 'Strength Training', reps: 12),
-    Workout(name: 'Pushups', description: 'Strength Training', reps: 12),
-    Workout(name: 'Pushups', description: 'Strength Training', reps: 12)
+    Workout(name: 'bicep curl', description: 'Strength Training', reps: 12),
   ];
 
 
@@ -25,7 +25,7 @@ class _listItemsState extends State<listItems> {
       ),
       body: Column(
         children: workout.map((work){
-          return Text(work.name);
+          return ItemCard(workout: work);
         }).toList(),
       ),
     );

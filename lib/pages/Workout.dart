@@ -1,7 +1,7 @@
 class Workout{
   String name;
   String description;
-  double reps;
+  int reps;
 
   Workout({
     required this.name,
