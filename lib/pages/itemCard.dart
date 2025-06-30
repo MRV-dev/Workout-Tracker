@@ -21,25 +21,26 @@ class ItemCard extends StatelessWidget {
                   children: [
                     Row(
                       children: [
-                        Icon(Icons.fitness_center, size: 40,),
+                        Icon(Icons.fitness_center, size: 40, color: Colors.white,),
+                        SizedBox(width: 20,),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(workout.name, style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold
+                            ),),
+                            Text(workout.description, style: TextStyle(
+                              fontSize: 17,
+                              color: Colors.white,
+                            ),),
+                          ],
+
+                        ),
                       ],
                     ),
 
-                  ],
-                ),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-
-                  children: [
-                    Text(workout.name, style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold
-                    ),),
-                    Text(workout.description, style: TextStyle(
-                        fontSize: 17,
-                        color: Colors.white,
-                    ),),
                   ],
                 ),
                 Column(
