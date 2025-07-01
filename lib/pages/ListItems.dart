@@ -28,6 +28,12 @@ class _listItemsState extends State<listItems> {
           return ItemCard(workout: work);
         }).toList(),
       ),
+      floatingActionButton: FloatingActionButton(
+          onPressed: (){
+            Navigator.pushNamed(context, '/Add');
+          },
+        child: Icon(Icons.add),
+      ),
     );
   }
 }
