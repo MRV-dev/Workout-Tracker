@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:new_app/World_time/home.dart';
 
 
 
 void main() {
   runApp(MaterialApp(
-
+    debugShowCheckedModeBanner: false,
+    home: Home(),
   ));
 }
 
